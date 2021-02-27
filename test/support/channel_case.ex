@@ -1,4 +1,4 @@
-defmodule RocketpayWeb.ChannelCase do
+defmodule ErlearnixWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -11,7 +11,7 @@ defmodule RocketpayWeb.ChannelCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use RocketpayWeb.ChannelCase, async: true`, although
+  by setting `use ErlearnixWeb.ChannelCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -21,18 +21,18 @@ defmodule RocketpayWeb.ChannelCase do
     quote do
       # Import conveniences for testing with channels
       import Phoenix.ChannelTest
-      import RocketpayWeb.ChannelCase
+      import ErlearnixWeb.ChannelCase
 
       # The default endpoint for testing
-      @endpoint RocketpayWeb.Endpoint
+      @endpoint ErlearnixWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Rocketpay.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Erlearnix.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Rocketpay.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Erlearnix.Repo, {:shared, self()})
     end
 
     :ok

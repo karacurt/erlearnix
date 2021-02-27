@@ -1,2 +1,2 @@
 ExUnit.start()
-Ecto.Adapters.SQL.Sandbox.mode(Rocketpay.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(Erlearnix.Repo, :manual)

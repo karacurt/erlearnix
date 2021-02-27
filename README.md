@@ -1,4 +1,4 @@
-# Rocketpay
+# Erlearnix
 
 To start your Phoenix server:
 

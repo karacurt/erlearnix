@@ -1,9 +1,9 @@
-defmodule Rocketpay.MixProject do
+defmodule Erlearnix.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :rocketpay,
+      app: :erlearnix,
       version: "0.1.0",
       elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -19,7 +19,7 @@ defmodule Rocketpay.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Rocketpay.Application, []},
+      mod: {Erlearnix.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -42,8 +42,7 @@ defmodule Rocketpay.MixProject do
       {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"},
-      {:credo, "~> 1.5", only: [:dev, :test], runtime: false}
+      {:plug_cowboy, "~> 2.0"}
     ]
   end
 
