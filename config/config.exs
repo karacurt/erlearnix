@@ -18,6 +18,10 @@ config :erlearnix, ErlearnixWeb.Endpoint,
   pubsub_server: Erlearnix.PubSub,
   live_view: [signing_salt: "8tT70PEt"]
 
+config :erlearnix, Erlearnix.Repo,
+  migration_primary_key: [type: :binary_id],
+  migration_foreign_key: [type: :binary_id]
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
